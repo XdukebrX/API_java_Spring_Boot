@@ -1,7 +1,7 @@
 package aulas.classes;
 
 public class Aluno {
-    private String name, email;
+    private String name, email;//não vo botar nada aqui ja q é bem obvio
     private int id;
 
     public String getEmail() {
