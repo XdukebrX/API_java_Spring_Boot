@@ -9,7 +9,7 @@ import aulas.classes.Aluno;
 import aulas.utils.Conection;
 
 public class Alunodao {
-    //  , String email, int id XD
+   
     public static String getAluno_byname(String name) {
         Connection c = Conection.connection();
        LinkedList<Aluno> la = new LinkedList<Aluno>();
