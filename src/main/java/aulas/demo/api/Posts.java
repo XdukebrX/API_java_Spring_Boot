@@ -21,13 +21,13 @@ public class Posts
 
 
 
-
+    @ResponseBody
     @RequestMapping(value = "/aluno", method = RequestMethod.POST)   //indica o metodo da request e a url para acessala  
-    public ResponseEntity <String> postAluno(@RequestBody String json/**indica que o methodo ira receber dados tipo String **/) {
+    public ResponseEntity <String> postAluno(@RequestBody Aluno json/**indica que o methodo ira receber dados tipo String **/) {
  
-		Gson gson = new Gson();//instancia a classe para converter o json para objeto 
+		
 
-		Aluno a = gson.fromJson(json, Aluno.class);// converte os dados recebidos via json para string e os coloca nas devidas variaveis
+		Aluno a = json;// converte os dados recebidos via json para string e os coloca nas devidas variaveis
 		
 
         if (!a.getName().isEmpty()  && !a.getEmail().isEmpty() && !a.getCpf().isEmpty() )  {//valida se ambas variaveis estao preenchidas de acordo
@@ -42,9 +42,10 @@ public class Posts
 
            }
             
-            return ResponseEntity.status(HttpStatus.CREATED).build();// retorna status 201 criado 
+            return ResponseEntity.status(HttpStatus.CREATED).body("teu cu")  ;// retorna status 201 criado 
+           
         }else{
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("adasdasdasdasd");// retorna status 204 sem conteudo
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("falta dados");// retorna status 204 sem conteudo
         }
 
 

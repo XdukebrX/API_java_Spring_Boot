@@ -14,7 +14,14 @@ public class Alunodao {
     public static String getAluno_byname /**  indica que o methodo pode ser chamado sem instanciar a classe a que ele pertence **/ (String name/** indica que o methodo ira receber uma String para pesquisa**/) {
         Connection c = Conection.connection();//instancia a classe para conexao do banco de dados
        LinkedList<Aluno> la = new LinkedList<Aluno>();// cria um vetor semi infinito de alunos
-        String sql = "SELECT * from users where name =?";//seta em uma String a querry a ser feita e define rotulo
+       String sql;
+        if (name.isEmpty()){
+           sql = "SELECT * from students";
+        }else{
+          sql = "SELECT * from students where name =?";//seta em uma String a querry a ser feita e define rotulo
+        }
+
+         
         try { // tenta essa merda e se não joga o erro pro catch que nos retorna a jagonça 
             PreparedStatement ps = c.prepareStatement(sql);// prepara a querry para ser enviada ao banco
             ps.setString(1, name); // troca o 1 rotulo por seu valor verdadeiro enviado quando o methodo foi chamado
@@ -41,7 +48,7 @@ public class Alunodao {
     public static void postAluno /**  indica que o methodo pode ser chamado sem instanciar a classe a que ele pertence **/ (Aluno a/** indica que o methodo ira receber um objeto do tipo aluno**/)
     {
       Connection c =  Conection.connection();//chama a conexao para o banco de dados
-      String sql = "INSERT INTO users (name, email,cpf, reg_number ) values (?,?,?,?)";/**seta em uma variavel string a querry a ser feita no
+      String sql = "INSERT INTO students (name, email,cpf, reg_number ) values (?,?,?,?)";/**seta em uma variavel string a querry a ser feita no
                                                                   banco e define os rotulos suponho eu para evitar SQL inject **/
 
       try {// tenta essa merda e se não joga o erro pro catch que nos retorna a jagonça 

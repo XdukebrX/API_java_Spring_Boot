@@ -4,10 +4,10 @@ package aulas.classes;
 
 public class Aluno {
     private String name, email,cpf;//não vo botar nada aqui ja q é bem obvio
-    private int id, r_n ;
+    private Integer id, r_n ;
     
 
-    public int getR_n() {
+    public Integer getR_n() {
         return r_n;
     }
 
@@ -21,7 +21,7 @@ public class Aluno {
         return email;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -30,7 +30,7 @@ public class Aluno {
         return name;
     }
 
-    public void setR_n(int r_n) {
+    public void setR_n(Integer r_n) {
         this.r_n = r_n;
     }
 
@@ -47,7 +47,7 @@ public class Aluno {
         this.email = email;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -55,7 +55,7 @@ public class Aluno {
         this.name = name;
     }
 
-    public Aluno (String name_, String email_, int id_, String cpf_, int r_n_){
+    public Aluno (String name_, String email_, Integer id_, String cpf_, Integer r_n_){
        setName(name_);
        setEmail(email_);
        setId(id_);
