@@ -6,12 +6,12 @@ import dao.Alunodao;
 
 
 
-import com.google.gson.Gson;
+
 
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import aulas.classes.Aluno;
+import aulas.casts.Aluno;
 import aulas.utils.ValidaCPF;
 
 @RestController

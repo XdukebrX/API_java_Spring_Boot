@@ -19,7 +19,7 @@ public class Conection {
 			return c;
 	   }  catch (Exception e)// pega qualquer erro fatal que tenha occorido durante o try e joga ele para o valor e
 	   {
-			System.err.println("Got an exception!");//copypasta
+			System.err.println("VE SE O SERVIÇO DO SQL NÃO TA OF FILHO DA PUTA");//copypasta
 			System.err.println(e.getMessage());// mostra o erro gerado no try no consolo
 	   }
 	   return null ;//tive q botar aqui mas confia q ele retorna o return dentro do try

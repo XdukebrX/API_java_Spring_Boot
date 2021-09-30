@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 import com.google.gson.Gson;
 
-import aulas.classes.Aluno;
+import aulas.casts.Aluno;
 import aulas.utils.Conection;
 
 public class Alunodao {
@@ -23,7 +23,9 @@ public class Alunodao {
 
          
         try { // tenta essa merda e se não joga o erro pro catch que nos retorna a jagonça 
+          
             PreparedStatement ps = c.prepareStatement(sql);// prepara a querry para ser enviada ao banco
+            System.out.println(sql);
             ps.setString(1, name); // troca o 1 rotulo por seu valor verdadeiro enviado quando o methodo foi chamado
             ResultSet rs = ps.executeQuery();// executa a pesquisa e insere o retorno na variavel 
          
