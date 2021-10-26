@@ -12,13 +12,13 @@ import aulas.utils.Conection;
 public class Alunodao {
    
     public static String getAluno_byname /**  indica que o methodo pode ser chamado sem instanciar a classe a que ele pertence **/ (String name/** indica que o methodo ira receber uma String para pesquisa**/) {
-        Connection c = Conection.connection();//instancia a classe para conexao do banco de dados
+       Connection c = Conection.connection();//instancia a classe para conexao do banco de dados
        LinkedList<Aluno> la = new LinkedList<Aluno>();// cria um vetor semi infinito de alunos
        String sql;
         if (name.isEmpty()){
            sql = "SELECT * from students";
         }else{
-          sql = "SELECT * from students where name =?";//seta em uma String a querry a ser feita e define rotulo
+          sql = "SELECT * from students where id_users =1";//seta em uma String a querry a ser feita e define rotulo
         }
 
          
@@ -64,10 +64,6 @@ public class Alunodao {
       } catch (Exception e) {// pega qualquer erro fatal que tenha occorido durante o try e joga ele para o valor e
         System.err.println(e);// mostra a porra do erro que deu no consolo
       }
-
-
-
-
     }
 
 

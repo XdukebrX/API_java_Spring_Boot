@@ -2,9 +2,9 @@ package aulas.casts;
 
 
 
-public class Aluno {
-    private String name, email,cpf;//não vo botar nada aqui ja q é bem obvio
-    private Integer id, r_n ;
+public class Aluno extends Pessoa {
+   //não vo botar nada aqui ja q é bem obvio
+    private Integer  r_n ;
     
 
     public Integer getR_n() {
@@ -13,22 +13,6 @@ public class Aluno {
 
  
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-   
-     public String getName() {
-        return name;
-    }
 
     public void setR_n(Integer r_n) {
         this.r_n = r_n;
@@ -37,25 +21,10 @@ public class Aluno {
   
 
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    
 
     public Aluno (String name_, String email_, Integer id_, String cpf_, Integer r_n_){
+       
        setName(name_);
        setEmail(email_);
        setId(id_);
